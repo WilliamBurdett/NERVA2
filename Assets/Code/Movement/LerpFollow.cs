@@ -3,55 +3,54 @@ using System.Collections;
 using System.Configuration.Assemblies;
 
 public class LerpFollow : MonoBehaviour {
-    [SerializeField] public GameObject target;
+    [SerializeField] public Transform target;
 
-    private Vector3 difference;
+    private Vector3 offset;
 
     [SerializeField] private float distanceBehindTarget;
     [SerializeField] private float distanceAboveTarget;
     [SerializeField] private float distanceAdjacentTarget;
 
-    [SerializeField] private bool differenceChanged = true;
+    [SerializeField] private bool directionChanged = true;
 
     [SerializeField] private float lerpSpeed = 0.5f;
 
-	public GameObject Target{
+	public Transform Target{
 		get { return target; }
 		set {
 			this.target = value;
-			differenceChanged = true;
+			directionChanged = true;
 		}
 	}
 
     public float DistanceBehindTarget {
-        get { return Mathf.Abs(this.difference.z); }
+        get { return Mathf.Abs(this.offset.z); }
         set {
-            this.difference = new Vector3(0, 0, -1*value) + difference;
-            differenceChanged = true;
+            this.offset.z = -1f*value;
+            directionChanged = true;
         }
     }
 
     public float DistanceAboveTarget {
-        get { return this.difference.y; }
+        get { return this.offset.y; }
         set {
-            this.difference = new Vector3(0, value, 0) + difference;
-            differenceChanged = true;
+            this.offset.y = value;
+            directionChanged = true;
         }
     }
 
     public float DistanceAdjacentTarget {
-        get { return this.difference.x; }
+        get { return this.offset.x; }
         set {
-            this.difference = new Vector3(value,0,0) + difference;
-            differenceChanged = true;
+            this.offset.x = value;
+            directionChanged = true;
         }
     }
 
     public float LerpSpeed {
-        get { return this.difference.x; }
+        get { return this.offset.x; }
         set {
             this.lerpSpeed = value;
-            differenceChanged = true;
         }
     }
 
@@ -61,13 +60,14 @@ public class LerpFollow : MonoBehaviour {
     }
 
     void Update() {
-        if (differenceChanged) {
-            difference = new Vector3(distanceAdjacentTarget, distanceAboveTarget, distanceBehindTarget);
-            differenceChanged = false;
+        if (directionChanged) {
+            offset = new Vector3(distanceAdjacentTarget, distanceAboveTarget, distanceBehindTarget);
+            directionChanged = false;
         }
-        Vector3 modifiedTargetPostition = target.transform.position + difference;
-        transform.position = Vector3.Lerp(transform.position, modifiedTargetPostition, Time.deltaTime*lerpSpeed);
+        Vector3 modifiedTargetPostition = target.position + offset;
+        transform.position = Vector3.Lerp(transform.position,modifiedTargetPostition,Time.deltaTime*lerpSpeed);
+        transform.position = modifiedTargetPostition;
 
-        transform.LookAt(target.transform);
+        transform.LookAt(transform);
     }
 }

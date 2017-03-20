@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor;
 
 public class MoveForward : MonoBehaviour {
     [SerializeField] private float speed=100f;
