@@ -51,6 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7fad79433c8f4152904cff74904bcaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ship: {fileID: 1997083220445118, guid: 8bd83490d7ee344df8bc391e1540aa09, type: 2}
-  target: {fileID: 1117929871606970, guid: 608f633f2154a4c2395c8dbec75b3dba, type: 2}
+  ship: {fileID: 1017563814745462, guid: 04da4c5a778485f4dbbbf4b0aa925e57, type: 2}
   mainCamera: {fileID: 1409688872184800, guid: c49f238573c024af494f985cbfa63f9d, type: 2}

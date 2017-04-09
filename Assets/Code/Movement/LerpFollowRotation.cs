@@ -9,6 +9,7 @@ public class LerpFollowRotation : MonoBehaviour {
         set { this.target = value; }
     }
 
+    [SerializeField]
     private float lerpSpeed;
     public float LerpSpeed {
         get { return lerpSpeed; }

@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  lerpSpeed: 10
 --- !u!114 &114512229452273948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  horizontalOffset: 10
 --- !u!124 &124806009435289830
 Behaviour:
   m_ObjectHideFlags: 1

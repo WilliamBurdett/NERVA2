@@ -15,7 +15,6 @@ public class SpawnPlayer : MonoBehaviour {
 		GameObject cameraObject = GameObject.Instantiate (mainCamera);
         
         cameraObject.GetComponent<LerpFollowRotation>().Target = shipObject.transform;
-        cameraObject.GetComponent<LerpFollowRotation>().LerpSpeed = 10f;
 	    GameObject actualCameraObject = null;
 	    foreach (Transform child in cameraObject.transform) {
 	        if (child.tag == "MainCamera") {
@@ -26,7 +25,6 @@ public class SpawnPlayer : MonoBehaviour {
             Debug.LogError("ErrorCode: 78924 | Camera is null");
         }
         actualCameraObject.GetComponent<LookAt>().Target = shipObject;
-        actualCameraObject.GetComponent<LookAt>().HorizontalOffset = 10;
 
 
         //		cameraObject.GetComponent<SmoothFollow> ().target = shipObject.transform;

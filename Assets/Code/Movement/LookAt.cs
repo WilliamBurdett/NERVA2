@@ -9,6 +9,7 @@ public class LookAt : MonoBehaviour {
         set { this.target = value; }
     }
 
+    [SerializeField]
     private float horizontalOffset;
     public float HorizontalOffset {
         get { return horizontalOffset; }
