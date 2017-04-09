@@ -15,7 +15,7 @@ public class SpawnPlayer : MonoBehaviour {
 		GameObject cameraObject = GameObject.Instantiate (mainCamera);
         
         cameraObject.GetComponent<LerpFollowRotation>().Target = shipObject.transform;
-        cameraObject.GetComponent<LerpFollowRotation>().LerpSpeed = 5f;
+        cameraObject.GetComponent<LerpFollowRotation>().LerpSpeed = 10f;
 	    GameObject actualCameraObject = null;
 	    foreach (Transform child in cameraObject.transform) {
 	        if (child.tag == "MainCamera") {

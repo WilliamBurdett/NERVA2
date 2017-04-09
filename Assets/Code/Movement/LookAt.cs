@@ -6,7 +6,7 @@ public class LookAt : MonoBehaviour {
     public GameObject target;
     public GameObject Target {
         get { return target; }
-        set { this.target = value; Debug.Log("set target"); }
+        set { this.target = value; }
     }
 
     private float horizontalOffset;
