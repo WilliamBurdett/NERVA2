@@ -20,6 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4594151043198712}
   - component: {fileID: 114142783860662134}
+  - component: {fileID: 114969020446604278}
+  - component: {fileID: 114283810537046278}
+  - component: {fileID: 114315831036123164}
+  - component: {fileID: 114499736218696620}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Untagged
@@ -168,3 +172,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: 0
+--- !u!114 &114283810537046278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017563814745462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10b7df79a86aa94886d604fa22f56fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1409688872184800, guid: c49f238573c024af494f985cbfa63f9d, type: 2}
+--- !u!114 &114315831036123164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017563814745462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6068a436f9f4c5e4f9ad90de4c1c2585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionUpdateRate: 0.2
+--- !u!114 &114499736218696620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017563814745462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43adece11032a0a49acaacf229d9da40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionUpdateRate: 0.2
+--- !u!114 &114969020446604278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017563814745462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 4
+    i1: 218
+    i2: 76
+    i3: 90
+    i4: 119
+    i5: 132
+    i6: 133
+    i7: 244
+    i8: 219
+    i9: 187
+    i10: 244
+    i11: 176
+    i12: 170
+    i13: 146
+    i14: 94
+    i15: 87
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class SpawnPlayer : MonoBehaviour {
+public class SpawnPlayer : NetworkBehaviour {
 	[SerializeField] private GameObject ship;
 	[SerializeField] private GameObject mainCamera;
 
@@ -10,8 +11,9 @@ public class SpawnPlayer : MonoBehaviour {
 	void Start () {
 		if (ship == null || mainCamera == null) {
 			Debug.LogError ("ErrorCode: 78923 | Ship or camera are null");
+		    return;
 		}
-		GameObject shipObject = GameObject.Instantiate (ship);
+	    GameObject shipObject = GameObject.Instantiate (ship);
 		GameObject cameraObject = GameObject.Instantiate (mainCamera);
         
         cameraObject.GetComponent<LerpFollowRotation>().Target = shipObject.transform;
